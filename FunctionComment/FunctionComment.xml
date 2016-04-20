@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FunctionComment</name>
+    </assembly>
+    <members>
+        <member name="T:FunctionComment.Connect">
+            <summary>추가 기능을 구현하는 개체입니다.</summary>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FunctionComment.Connect.#ctor">
+            <summary>추가 기능 개체에 대한 생성자를 구현합니다. 이 메서드 안에 초기화 코드를 배치하십시오.</summary>
+        </member>
+        <member name="M:FunctionComment.Connect.OnConnection(System.Object,Extensibility.ext_ConnectMode,System.Object,System.Array@)">
+            <summary>IDTExtensibility2 인터페이스의 OnConnection 메서드를 구현합니다. 추가 기능이 로드되고 있다는 알림 메시지를 받습니다.</summary>
+            <param term='application'>호스트 응용 프로그램의 루트 개체입니다.</param>
+            <param term='connectMode'>추가 기능이 로드되는 방법을 설명합니다.</param>
+            <param term='addInInst'>이 추가 기능을 나타내는 개체입니다.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FunctionComment.Connect.OnDisconnection(Extensibility.ext_DisconnectMode,System.Array@)">
+            <summary>IDTExtensibility2 인터페이스의 OnDisconnection 메서드를 구현합니다. 추가 기능이 언로드되고 있다는 알림 메시지를 받습니다.</summary>
+            <param term='disconnectMode'>추가 기능이 언로드되는 방법을 설명합니다.</param>
+            <param term='custom'>호스트 응용 프로그램과 관련된 매개 변수의 배열입니다.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FunctionComment.Connect.OnAddInsUpdate(System.Array@)">
+            <summary>IDTExtensibility2 인터페이스의 OnAddInsUpdate 메서드를 구현합니다. 추가 기능의 컬렉션이 변경되면 알림 메시지를 받습니다.</summary>
+            <param term='custom'>호스트 응용 프로그램과 관련된 매개 변수의 배열입니다.</param>
+            <seealso class='IDTExtensibility2' />		
+        </member>
+        <member name="M:FunctionComment.Connect.OnStartupComplete(System.Array@)">
+            <summary>IDTExtensibility2 인터페이스의 OnStartupComplete 메서드를 구현합니다. 호스트 응용 프로그램에서 로드가 완료되었다는 알림 메시지를 받습니다.</summary>
+            <param term='custom'>호스트 응용 프로그램과 관련된 매개 변수의 배열입니다.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FunctionComment.Connect.OnBeginShutdown(System.Array@)">
+            <summary>IDTExtensibility2 인터페이스의 OnBeginShutdown 메서드를 구현합니다. 호스트 응용 프로그램이 언로드되고 있다는 알림 메시지를 받습니다.</summary>
+            <param term='custom'>호스트 응용 프로그램과 관련된 매개 변수의 배열입니다.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FunctionComment.Connect.QueryStatus(System.String,EnvDTE.vsCommandStatusTextWanted,EnvDTE.vsCommandStatus@,System.Object@)">
+            <summary>IDTCommandTarget 인터페이스의 QueryStatus 메서드를 구현합니다. 이 메서드는 명령의 사용 여부가 업데이트되면 호출됩니다.</summary>
+            <param term='commandName'>상태를 확인할 명령의 이름입니다.</param>
+            <param term='neededText'>명령에 필요한 텍스트입니다.</param>
+            <param term='status'>사용자 인터페이스에서의 명령 상태입니다.</param>
+            <param term='commandText'>neededText 매개 변수에서 요청한 텍스트입니다.</param>
+            <seealso class='Exec' />
+        </member>
+        <member name="M:FunctionComment.Connect.Exec(System.String,EnvDTE.vsCommandExecOption,System.Object@,System.Object@,System.Boolean@)">
+            <summary>IDTCommandTarget 인터페이스의 Exec 메서드를 구현합니다. 이 메서드는 명령이 호출되면 호출됩니다.</summary>
+            <param term='commandName'>실행할 명령의 이름입니다.</param>
+            <param term='executeOption'>명령을 실행하는 방법을 설명합니다.</param>
+            <param term='varIn'>호출자에서 명령 처리기로 전달된 매개 변수입니다.</param>
+            <param term='varOut'>명령 처리기에서 호출자로 전달된 매개 변수입니다.</param>
+            <param term='handled'>명령이 처리되었는지 여부를 호출자에게 알립니다.</param>
+            <seealso class='Exec' />
+        </member>
+    </members>
+</doc>
